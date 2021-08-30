@@ -10,4 +10,8 @@ def interface():
     print(choice)
     return choice
 
+def hdl_input():
+    hdl_value = int(input(("Enter HDL Value: ")))
+    return hdl_value
+
 interface()

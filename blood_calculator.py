@@ -2,11 +2,14 @@ def interface():
     keep_running = True
     print("My Program")
     print("Options")
+    print("1 - Analysis")
     print("9 - Quit")
     while keep_running:
         choice = input("Enter your choice: ")
         if choice == '9':
             keep_running = False
+        elif choice == '1':
+            driver_HDL()
     print(choice)
     return choice
 

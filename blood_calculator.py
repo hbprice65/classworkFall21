@@ -17,6 +17,10 @@ def hdl_input():
     hdl_value = int(input(("Enter HDL Value: ")))
     return hdl_value
 
+def ldl_input():
+    ldl_value = int(input(("Enter LDL Value: ")))
+    return ldl_value
+
 def check_HDL(HDL_value):
     if HDL_value >= 60:
         out = "Normal"
@@ -24,6 +28,17 @@ def check_HDL(HDL_value):
         out = "Borderline Low"
     else:
         out = "Low"
+    return out
+    
+def check_LDL(LDL_value):
+    if LDL_value < 130 :
+        out = "Normal"
+    elif 130 <= LDL_value <= 159:
+        out = "borderline high"
+    elif 160 <= LDL_value <= 189:
+        out = "high"
+    else:
+        out = "very high"
     return out
 
 def driver_HDL():

@@ -2,7 +2,8 @@ def interface():
     keep_running = True
     print("My Program")
     print("Options")
-    print("1 - Analysis")
+    print("1 - Analysis HDL")
+    print("2 - Analysis LDL")
     print("9 - Quit")
     while keep_running:
         choice = input("Enter your choice: ")
@@ -10,6 +11,8 @@ def interface():
             keep_running = False
         elif choice == '1':
             driver_HDL()
+        elif choice == '2':
+            driver_LDL()
     print(choice)
     return choice
 

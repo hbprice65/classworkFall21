@@ -29,7 +29,7 @@ def check_HDL(HDL_value):
     else:
         out = "Low"
     return out
-    
+
 def check_LDL(LDL_value):
     if LDL_value < 130 :
         out = "Normal"
@@ -44,10 +44,15 @@ def check_LDL(LDL_value):
 def driver_HDL():
     hdl_value = hdl_input()
     hdlCheck = check_HDL(hdl_value)
-    outputResults(hdl_value,hdlCheck)
+    outputResults(hdl_value,hdlCheck,"HDL")
+
+def driver_LDL():
+    ldl_value = ldl_input()
+    ldlCheck = check_LDL(ldl_value)
+    outputResults(ldl_value,ldlCheck,"LDL")
 
 
-def outputResults(valueHDL,outCheckHDL):
-    print("Patient's HDL is " +str(valueHDL) + " which is "  +outCheckHDL)
+def outputResults(valueHDL,outCheckHDL,resultType):
+    print("Patient's " + resultType + " is " +str(valueHDL) + " which is "  +outCheckHDL)
 
 interface()

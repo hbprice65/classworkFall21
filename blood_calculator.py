@@ -26,4 +26,10 @@ def check_HDL(HDL_value):
 def driver_HDL():
     hdl_value = hdl_input()
     hdlCheck = check_HDL(hdl_value)
+    outputResults(hdl_value,hdlCheck)
+
+
+def outputResults(valueHDL,outCheckHDL):
+    print("Patient's HDL is " +str(valueHDL) + " which is "  +outCheckHDL)
+
 interface()
